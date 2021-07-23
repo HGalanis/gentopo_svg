@@ -25,6 +25,17 @@ function myFunction() {
             arr[0] = "M " + "1 " + " " + "4 ";
             arr[1] = " C " + randomNumber(0,2.5,2) + " " +  randomNumber(0,2.5,2) + " " +  randomNumber(0,2.5,2) + " " +  randomNumber(0,2.5,2) 
             + " " + randomNumber(2.5,5,2) + " " + randomNumber(0,2.5,2); // C (x1 y1) (x2 y2) (X Y)
+
+            arr[2] = " C " + randomNumber(7.5,10,2) + " " +  randomNumber(0,2.5,2) + " " +  randomNumber(7.5,10,2) + " " +  randomNumber(0,2.5,2) 
+            + " " + randomNumber(7.5,10,2) + " " + randomNumber(2.5,5,2); // C (x1 y1) (x2 y2) (X Y)
+
+            arr[3] = " C " + randomNumber(10,12,2) + " " +  randomNumber(7.5,7.5,2) + " " +  randomNumber(10,12,2) + " " +  randomNumber(7.5,10,2) 
+            + " " + randomNumber(2.5,7.5,2) + " " + randomNumber(7.5,10,2); // C (x1 y1) (x2 y2) (X Y)
+
+            arr[4] = " C " + randomNumber(0,2.5,2) + " " +  randomNumber(5,10,2) + " " +  randomNumber(0,2.5,2) + " " +  randomNumber(5,10,2) 
+            + " " + "1" + " " + "4"; // C (x1 y1) (x2 y2) (X Y)
+
+            arr[5] = " Z "
           }
     
     document.getElementById("coord").innerHTML = numbers.join("");
