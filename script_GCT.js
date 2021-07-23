@@ -15,16 +15,16 @@ function myFunction() {
     //Calculo coordenadas - genera numeros random 
     var numbers = numArray;
     numbers.forEach(calcCoordenadas)
-        function randomNumber(min, max) {
-          return Math.floor(Math.random() * (max - min) + min);
+        function randomNumber(min, max, decimalPlaces) {
+          return (Math.random() * (max - min) + min).toFixed(decimalPlaces) * 1;
           }
-          // Q = x1+ y2 + X + Y; == Q = 3 + 2 + 3 + 2
+          // C (x1 y1) (x2 y2) (X Y) 
+          // Mi punto M está dentro del Cuadrante A3
+          // Muevo mi punto C dentro del Cuadrante A2, y su asa dentro del cuadrante A1 o A4.
         function calcCoordenadas(item, index, arr) {
-            arr[0] = "M " + "3" + " " + "3 ";
-            arr[1] = "L " + "7" + " " + "3 ";
-            arr[2] = "L " + "7" + " " + "7 ";
-            arr[3] = "L " + "3" + " " + "7";
-            arr[8] = " Z ";
+            arr[0] = "M " + "1 " + " " + "4 ";
+            arr[1] = " C " + randomNumber(0,2.5,2) + " " +  randomNumber(0,2.5,2) + " " +  randomNumber(0,2.5,2) + " " +  randomNumber(0,2.5,2) 
+            + " " + randomNumber(2.5,5,2) + " " + randomNumber(0,2.5,2); // C (x1 y1) (x2 y2) (X Y)
           }
     
     document.getElementById("coord").innerHTML = numbers.join("");
