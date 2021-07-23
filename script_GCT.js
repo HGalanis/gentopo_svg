@@ -18,16 +18,19 @@ function myFunction() {
         function randomNumber(min, max) {
           return Math.floor(Math.random() * (max - min) + min);
           }
+          // Q = x1+ y2 + X + Y; == Q = 3 + 2 + 3 + 2
         function calcCoordenadas(item, index, arr) {
-            arr[0] = "M " + randomNumber(0,10) + " " + 0;
-            arr[index] = " Q " + randomNumber(0,10) + " " + randomNumber(0,10) + " " + randomNumber(0,10) + " " + randomNumber(0,10);
+            arr[0] = "M " + "3" + " " + "3 ";
+            arr[1] = "L " + "7" + " " + "3 ";
+            arr[2] = "L " + "7" + " " + "7 ";
+            arr[3] = "L " + "3" + " " + "7";
             arr[8] = " Z ";
           }
     
     document.getElementById("coord").innerHTML = numbers.join("");
 
     //Envio de Data SVG
-    document.getElementsByTagName("path")[1].setAttribute( "d", numbers.join("") );
+    document.getElementsByTagName("path")[0].setAttribute( "d", numbers.join("") );
     document.getElementById("coor_usadas").innerHTML = inputGet.value; // coordenadas usadas
   }
     
