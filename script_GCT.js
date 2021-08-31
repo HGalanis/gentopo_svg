@@ -22,20 +22,24 @@ function myFunction() {
           // Mi punto M está dentro del Cuadrante A3
           // Muevo mi punto C dentro del Cuadrante A2, y su asa dentro del cuadrante A1 o A4.
         function calcCoordenadas(item, index, arr) {
-            arr[0] = "M " + "1 " + " " + "4 ";
-            arr[1] = " C " + randomNumber(0,2.5,2) + " " +  randomNumber(0,2.5,2) + " " +  randomNumber(0,2.5,2) + " " +  randomNumber(0,2.5,2) 
+            arr[0] = "M " 
+            arr[1] = randomNumber(0,2.5,2) + " " + randomNumber(0,2.5,2);
+            arr[2] = " C " + randomNumber(0,2.5,2) + " " +  randomNumber(0,2.5,2) + " " +  randomNumber(0,2.5,2) + " " +  randomNumber(0,2.5,2) 
             + " " + randomNumber(2.5,5,2) + " " + randomNumber(0,2.5,2); // C (x1 y1) (x2 y2) (X Y)
 
-            arr[2] = " C " + randomNumber(7.5,10,2) + " " +  randomNumber(0,2.5,2) + " " +  randomNumber(7.5,10,2) + " " +  randomNumber(0,2.5,2) 
+            arr[3] = " C " + randomNumber(7.5,10,2) + " " +  randomNumber(0,2.5,2) + " " +  randomNumber(7.5,10,2) + " " +  randomNumber(0,2.5,2) 
             + " " + randomNumber(7.5,10,2) + " " + randomNumber(2.5,5,2); // C (x1 y1) (x2 y2) (X Y)
 
-            arr[3] = " C " + randomNumber(10,12,2) + " " +  randomNumber(7.5,7.5,2) + " " +  randomNumber(10,12,2) + " " +  randomNumber(7.5,10,2) 
+            arr[4] = " C " + randomNumber(10,12,2) + " " +  randomNumber(7.5,7.5,2) + " " +  randomNumber(10,12,2) + " " +  randomNumber(7.5,10,2) 
             + " " + randomNumber(2.5,7.5,2) + " " + randomNumber(7.5,10,2); // C (x1 y1) (x2 y2) (X Y)
 
-            arr[4] = " C " + randomNumber(0,2.5,2) + " " +  randomNumber(5,10,2) + " " +  randomNumber(0,2.5,2) + " " +  randomNumber(5,10,2) 
-            + " " + "1" + " " + "4"; // C (x1 y1) (x2 y2) (X Y)
+            arr[5] = " C " + randomNumber(0,2.5,2) + " " +  randomNumber(5,10,2) + " " +  randomNumber(0,2.5,2) + " " +  randomNumber(5,10,2) 
+            + " " + randomNumber(2.5,5,2) + " " + randomNumber(7.5,10,2) + " "; // C (x1 y1) (x2 y2) (X Y)
 
-            arr[5] = " Z "
+            // arr[5] = " C " + randomNumber(0,2.5,2) + " " + randomNumber(7.5,10,2) + " " + randomNumber(0,2.5,2) + " " + randomNumber(7.5,10,2) 
+           // + " " + arr[1]; // C (x1 y1) (x2 y2) (X Y)
+
+      
           }
     
     document.getElementById("coord").innerHTML = numbers.join("");
