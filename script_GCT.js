@@ -10,7 +10,6 @@ let inputGet = document.querySelector('#input-get');
 function myFunction() {
     //Numero
     var numArray = Array.from( inputGet.value );  
-    document.getElementById("cifras").innerHTML = numArray.join(" ");
 
     //Calculo coordenadas - genera numeros random 
     var numbers = numArray;
@@ -38,9 +37,6 @@ function myFunction() {
             arr[5] = " Z "
           }
     
-    document.getElementById("coord").innerHTML = numbers.join("");
-
     //Envio de Data SVG
     document.getElementsByTagName("path")[0].setAttribute( "d", numbers.join("") );
-    document.getElementById("coor_usadas").innerHTML = inputGet.value; // coordenadas usadas
   }
